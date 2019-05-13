@@ -28,6 +28,14 @@
       "MarketplaceWebServiceProducts": "src/",
       "MWSEasyShipSectionService": "src/",
       "MWSMerchantFulfillmentService": "src/"
+    },
+    "psr-4": {
+      "FBAInventoryServiceMWS\\": "src/FBAInventoryServiceMWS",
+      "MarketplaceWebService\\": "src/MarketplaceWebService",
+      "MarketplaceWebServiceOrders\\": "src/MarketplaceWebServiceOrders",
+      "MarketplaceWebServiceProducts\\": "src/MarketplaceWebServiceProducts",
+      "MWSEasyShipSectionService\\": "src/MWSEasyShipSectionService",
+      "MWSMerchantFulfillmentService\\": "src/MWSMerchantFulfillmentService"
     }
   }
 }

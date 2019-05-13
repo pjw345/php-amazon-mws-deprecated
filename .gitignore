@@ -1,3 +1,3 @@
-vendor/
-xsd/
-.idea/
+composer.lock
+vendor
+.idea
