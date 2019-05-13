@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Copyright 2009-2017 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -14,22 +14,22 @@
  * @package  Marketplace Web Service Products
  * @version  2011-10-01
  * Library Version: 2017-03-22
- * Generated: Thu Oct 11 10:46:02 PDT 2018
+ * Generated: Wed Mar 22 23:24:40 UTC 2017
  */
 
 /**
- *  @see MarketplaceWebServiceProducts_Model
+ * @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once(dirname(__FILE__) . '/../Model.php');
 
 
 /**
  * MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Products: MarketplaceWebServiceProducts_Model_ProductList</li>
  * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
  * <li>Id: string</li>
@@ -38,19 +38,19 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult extends MarketplaceWebServiceProducts_Model {
+class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult extends MarketplaceWebServiceProducts_Model
+{
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Products' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ProductList'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
-    'Id' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'IdType' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'status' => array('FieldValue' => null, 'FieldType' => '@string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+            'Products' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ProductList'),
+            'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+            'Id' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'IdType' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'status' => array('FieldValue' => null, 'FieldType' => '@string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -82,8 +82,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetProducts()
     {
-                return !is_null($this->_fields['Products']['FieldValue']);
-            }
+        return !is_null($this->_fields['Products']['FieldValue']);
+    }
 
     /**
      * Set the value of Products, return this.
@@ -128,8 +128,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetError()
     {
-                return !is_null($this->_fields['Error']['FieldValue']);
-            }
+        return !is_null($this->_fields['Error']['FieldValue']);
+    }
 
     /**
      * Set the value of Error, return this.
@@ -174,8 +174,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetId()
     {
-                return !is_null($this->_fields['Id']['FieldValue']);
-            }
+        return !is_null($this->_fields['Id']['FieldValue']);
+    }
 
     /**
      * Set the value of Id, return this.
@@ -220,8 +220,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIdType()
     {
-                return !is_null($this->_fields['IdType']['FieldValue']);
-            }
+        return !is_null($this->_fields['IdType']['FieldValue']);
+    }
 
     /**
      * Set the value of IdType, return this.
@@ -266,8 +266,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetstatus()
     {
-                return !is_null($this->_fields['status']['FieldValue']);
-            }
+        return !is_null($this->_fields['status']['FieldValue']);
+    }
 
     /**
      * Set the value of status, return this.

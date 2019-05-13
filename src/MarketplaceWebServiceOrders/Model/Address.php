@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2017 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,15 +13,15 @@
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2018-10-31
- * Generated: Mon Oct 22 22:40:38 UTC 2018
+ * Library Version: 2017-02-22
+ * Generated: Thu Mar 02 12:41:08 UTC 2017
  */
 
 /**
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once(dirname(__FILE__) . '/../Model.php');
 
 
 /**
@@ -38,11 +38,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>County: string</li>
  * <li>District: string</li>
  * <li>StateOrRegion: string</li>
- * <li>Municipality: string</li>
  * <li>PostalCode: string</li>
  * <li>CountryCode: string</li>
  * <li>Phone: string</li>
- * <li>AddressType: string</li>
  *
  * </ul>
  */
@@ -60,11 +58,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'County' => array('FieldValue' => null, 'FieldType' => 'string'),
     'District' => array('FieldValue' => null, 'FieldType' => 'string'),
     'StateOrRegion' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Municipality' => array('FieldValue' => null, 'FieldType' => 'string'),
     'PostalCode' => array('FieldValue' => null, 'FieldType' => 'string'),
     'CountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Phone' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressType' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
     }
@@ -438,52 +434,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
     }
 
     /**
-     * Get the value of the Municipality property.
-     *
-     * @return String Municipality.
-     */
-    public function getMunicipality()
-    {
-        return $this->_fields['Municipality']['FieldValue'];
-    }
-
-    /**
-     * Set the value of the Municipality property.
-     *
-     * @param string municipality
-     * @return this instance
-     */
-    public function setMunicipality($value)
-    {
-        $this->_fields['Municipality']['FieldValue'] = $value;
-        return $this;
-    }
-
-    /**
-     * Check to see if Municipality is set.
-     *
-     * @return true if Municipality is set.
-     */
-    public function isSetMunicipality()
-    {
-                return !is_null($this->_fields['Municipality']['FieldValue']);
-            }
-
-    /**
-     * Set the value of Municipality, return this.
-     *
-     * @param municipality
-     *             The new value to set.
-     *
-     * @return This instance.
-     */
-    public function withMunicipality($value)
-    {
-        $this->setMunicipality($value);
-        return $this;
-    }
-
-    /**
      * Get the value of the PostalCode property.
      *
      * @return String PostalCode.
@@ -618,52 +568,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function withPhone($value)
     {
         $this->setPhone($value);
-        return $this;
-    }
-
-    /**
-     * Get the value of the AddressType property.
-     *
-     * @return String AddressType.
-     */
-    public function getAddressType()
-    {
-        return $this->_fields['AddressType']['FieldValue'];
-    }
-
-    /**
-     * Set the value of the AddressType property.
-     *
-     * @param string addressType
-     * @return this instance
-     */
-    public function setAddressType($value)
-    {
-        $this->_fields['AddressType']['FieldValue'] = $value;
-        return $this;
-    }
-
-    /**
-     * Check to see if AddressType is set.
-     *
-     * @return true if AddressType is set.
-     */
-    public function isSetAddressType()
-    {
-                return !is_null($this->_fields['AddressType']['FieldValue']);
-            }
-
-    /**
-     * Set the value of AddressType, return this.
-     *
-     * @param addressType
-     *             The new value to set.
-     *
-     * @return This instance.
-     */
-    public function withAddressType($value)
-    {
-        $this->setAddressType($value);
         return $this;
     }
 

@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2017 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,15 +13,15 @@
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2018-10-31
- * Generated: Mon Oct 22 22:40:38 UTC 2018
+ * Library Version: 2017-02-22
+ * Generated: Thu Mar 02 12:41:08 UTC 2017
  */
 
 /**
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once(dirname(__FILE__) . '/../Model.php');
 
 
 /**
@@ -54,7 +54,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>ShipmentServiceLevelCategory: string</li>
  * <li>ShippedByAmazonTFM: bool</li>
  * <li>TFMShipmentStatus: string</li>
- * <li>EasyShipShipmentStatus: string</li>
  * <li>CbaDisplayableShippingLabel: string</li>
  * <li>OrderType: string</li>
  * <li>EarliestShipDate: string</li>
@@ -67,8 +66,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>IsPremiumOrder: bool</li>
  * <li>ReplacedOrderId: string</li>
  * <li>IsReplacementOrder: bool</li>
- * <li>PromiseResponseDueDate: string</li>
- * <li>IsEstimatedShipDateSet: bool</li>
  *
  * </ul>
  */
@@ -102,7 +99,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'ShipmentServiceLevelCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShippedByAmazonTFM' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'TFMShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EasyShipShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
     'CbaDisplayableShippingLabel' => array('FieldValue' => null, 'FieldType' => 'string'),
     'OrderType' => array('FieldValue' => null, 'FieldType' => 'string'),
     'EarliestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -115,8 +111,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'IsPremiumOrder' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'ReplacedOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'IsReplacementOrder' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PromiseResponseDueDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsEstimatedShipDateSet' => array('FieldValue' => null, 'FieldType' => 'bool'),
     );
     parent::__construct($data);
     }
@@ -1272,52 +1266,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
     }
 
     /**
-     * Get the value of the EasyShipShipmentStatus property.
-     *
-     * @return String EasyShipShipmentStatus.
-     */
-    public function getEasyShipShipmentStatus()
-    {
-        return $this->_fields['EasyShipShipmentStatus']['FieldValue'];
-    }
-
-    /**
-     * Set the value of the EasyShipShipmentStatus property.
-     *
-     * @param string easyShipShipmentStatus
-     * @return this instance
-     */
-    public function setEasyShipShipmentStatus($value)
-    {
-        $this->_fields['EasyShipShipmentStatus']['FieldValue'] = $value;
-        return $this;
-    }
-
-    /**
-     * Check to see if EasyShipShipmentStatus is set.
-     *
-     * @return true if EasyShipShipmentStatus is set.
-     */
-    public function isSetEasyShipShipmentStatus()
-    {
-                return !is_null($this->_fields['EasyShipShipmentStatus']['FieldValue']);
-            }
-
-    /**
-     * Set the value of EasyShipShipmentStatus, return this.
-     *
-     * @param easyShipShipmentStatus
-     *             The new value to set.
-     *
-     * @return This instance.
-     */
-    public function withEasyShipShipmentStatus($value)
-    {
-        $this->setEasyShipShipmentStatus($value);
-        return $this;
-    }
-
-    /**
      * Get the value of the CbaDisplayableShippingLabel property.
      *
      * @return String CbaDisplayableShippingLabel.
@@ -1906,108 +1854,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function withIsReplacementOrder($value)
     {
         $this->setIsReplacementOrder($value);
-        return $this;
-    }
-
-    /**
-     * Get the value of the PromiseResponseDueDate property.
-     *
-     * @return XMLGregorianCalendar PromiseResponseDueDate.
-     */
-    public function getPromiseResponseDueDate()
-    {
-        return $this->_fields['PromiseResponseDueDate']['FieldValue'];
-    }
-
-    /**
-     * Set the value of the PromiseResponseDueDate property.
-     *
-     * @param string promiseResponseDueDate
-     * @return this instance
-     */
-    public function setPromiseResponseDueDate($value)
-    {
-        $this->_fields['PromiseResponseDueDate']['FieldValue'] = $value;
-        return $this;
-    }
-
-    /**
-     * Check to see if PromiseResponseDueDate is set.
-     *
-     * @return true if PromiseResponseDueDate is set.
-     */
-    public function isSetPromiseResponseDueDate()
-    {
-                return !is_null($this->_fields['PromiseResponseDueDate']['FieldValue']);
-            }
-
-    /**
-     * Set the value of PromiseResponseDueDate, return this.
-     *
-     * @param promiseResponseDueDate
-     *             The new value to set.
-     *
-     * @return This instance.
-     */
-    public function withPromiseResponseDueDate($value)
-    {
-        $this->setPromiseResponseDueDate($value);
-        return $this;
-    }
-
-    /**
-     * Check the value of IsEstimatedShipDateSet.
-     *
-     * @return true if IsEstimatedShipDateSet is set to true.
-     */
-    public function isIsEstimatedShipDateSet()
-    {
-        return !is_null($this->_fields['IsEstimatedShipDateSet']['FieldValue']) && $this->_fields['IsEstimatedShipDateSet']['FieldValue'];
-    }
-
-    /**
-     * Get the value of the IsEstimatedShipDateSet property.
-     *
-     * @return Boolean IsEstimatedShipDateSet.
-     */
-    public function getIsEstimatedShipDateSet()
-    {
-        return $this->_fields['IsEstimatedShipDateSet']['FieldValue'];
-    }
-
-    /**
-     * Set the value of the IsEstimatedShipDateSet property.
-     *
-     * @param bool isEstimatedShipDateSet
-     * @return this instance
-     */
-    public function setIsEstimatedShipDateSet($value)
-    {
-        $this->_fields['IsEstimatedShipDateSet']['FieldValue'] = $value;
-        return $this;
-    }
-
-    /**
-     * Check to see if IsEstimatedShipDateSet is set.
-     *
-     * @return true if IsEstimatedShipDateSet is set.
-     */
-    public function isSetIsEstimatedShipDateSet()
-    {
-                return !is_null($this->_fields['IsEstimatedShipDateSet']['FieldValue']);
-            }
-
-    /**
-     * Set the value of IsEstimatedShipDateSet, return this.
-     *
-     * @param isEstimatedShipDateSet
-     *             The new value to set.
-     *
-     * @return This instance.
-     */
-    public function withIsEstimatedShipDateSet($value)
-    {
-        $this->setIsEstimatedShipDateSet($value);
         return $this;
     }
 
