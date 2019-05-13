@@ -1,0 +1,33 @@
+{
+  "name": "pjw345/php-amazon-mws",
+  "description": "An open-source library to connect to Amazon's MWS web services in an object-oriented manner, with a focus on intuitive usage.",
+  "keywords": [
+    "API",
+    "Amazon",
+    "PHP"
+  ],
+  "type": "library",
+  "license": "(Apache-2.0 and MIT)",
+  "authors": [
+    {
+      "name": "Paul J. Wright",
+      "email": "paulw@csdonline.co.uk",
+      "homepage": "http://discountedcleaningsupplies.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "ext-curl": "*"
+  },
+  "include-path": ["src/"],
+  "autoload": {
+    "psr-0": {
+      "FBAInventoryServiceMWS": "src/",
+      "MarketplaceWebService": "src/",
+      "MarketplaceWebServiceOrders": "src/",
+      "MarketplaceWebServiceProducts": "src/",
+      "MWSEasyShipSectionService": "src/",
+      "MWSMerchantFulfillmentService": "src/"
+    }
+  }
+}
