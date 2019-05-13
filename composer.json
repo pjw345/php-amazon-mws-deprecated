@@ -22,12 +22,7 @@
   "include-path": ["src/"],
   "autoload": {
     "psr-0": {
-      "FBAInventoryServiceMWS": "src/",
-      "MarketplaceWebService": "src/",
-      "MarketplaceWebServiceOrders": "src/",
-      "MarketplaceWebServiceProducts": "src/",
-      "MWSEasyShipSectionService": "src/",
-      "MWSMerchantFulfillmentService": "src/"
+      "": "src/"
     },
     "psr-4": {
       "FBAInventoryServiceMWS\\": "src/FBAInventoryServiceMWS",
