@@ -4,6 +4,7 @@
   "keywords": [
     "API",
     "Amazon",
+    "MWS",
     "PHP"
   ],
   "type": "library",
@@ -16,8 +17,15 @@
     }
   ],
   "require": {
-    "php": ">=5.5"
+    "php": ">=5.5.0",
+    "ext-curl": "*",
+    "ext-openssl": "*"
   },
+
+  "require-dev": {
+    "phpunit/phpunit": "~4.7"
+  },
+
   "autoload": {
     "psr-0": {
       "": "src/"
