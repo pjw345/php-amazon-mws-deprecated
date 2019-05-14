@@ -32,7 +32,7 @@
     },
     "psr-4": {
       "MarketplaceWebService\\": "src/MarketplaceWebService",
-      "MarketplaceWebServiceOrders\\": "src/MarketplaceWebServiceOrder",
+      "MarketplaceWebServiceOrders\\": "src/MarketplaceWebServiceOrders",
       "MarketplaceWebServiceProducts\\": "src/MarketplaceWebServiceProducts",
       "MWSMerchantFulfillmentService\\": "src/MWSMerchantFulfillmentService"
     }
