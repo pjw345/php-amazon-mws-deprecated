@@ -1,5 +1,6 @@
 {
   "name": "pjw345/php-amazon-mws",
+  "type": "library",
   "description": "An open-source library to connect to Amazon's MWS web services in an object-oriented manner, with a focus on intuitive usage.",
   "keywords": [
     "API",
@@ -7,7 +8,6 @@
     "MWS",
     "PHP"
   ],
-  "type": "library",
   "license": "(Apache-2.0)",
   "authors": [
     {
@@ -29,6 +29,12 @@
   "autoload": {
     "psr-0": {
       "": "src/"
+    },
+    "psr-4": {
+      "MarketplaceWebService\\": "src/MarketplaceWebService",
+      "MarketplaceWebServiceOrders\\": "src/MarketplaceWebServiceOrder",
+      "MarketplaceWebServiceProducts\\": "src/MarketplaceWebServiceProducts",
+      "MWSMerchantFulfillmentService\\": "src/MWSMerchantFulfillmentService"
     }
   }
 }
