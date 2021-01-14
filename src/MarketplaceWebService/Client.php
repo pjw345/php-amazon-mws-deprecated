@@ -19,8 +19,8 @@
 /**
  * @see MarketplaceWebService_Interface
  */
-require_once('Interface.php');
-require_once('RequestType.php');
+require_once(dirname(__FILE__) . '/Interface.php');
+require_once(dirname(__FILE__) . '/RequestType.php');
 
 define('CONVERTED_PARAMETERS_KEY', 'PARAMETERS');
 define('CONVERTED_HEADERS_KEY', 'HEADERS');
@@ -264,10 +264,10 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
     public function getReport($request)
     {
         if (!$request instanceof MarketplaceWebService_Model_GetReportRequest) {
-            require_once('Model/GetReportRequest.php');
+            require_once(dirname(__FILE__) . '/Model/GetReportRequest.php');
             $request = new MarketplaceWebService_Model_GetReportRequest($request);
         }
-        require_once('Model/GetReportResponse.php');
+        require_once(dirname(__FILE__) . '/Model/GetReportResponse.php');
 
         $httpResponse = $this->invoke($this->convertGetReport($request), $request->getReport());
         $response = MarketplaceWebService_Model_GetReportResponse::fromXML($httpResponse['ResponseBody']);
@@ -316,7 +316,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
 
                         case 500:
                         case 503:
-                            require_once('Model/ErrorResponse.php');
+                        require_once(dirname(__FILE__) . '/Model/ErrorResponse.php');
                             $errorResponse = MarketplaceWebService_Model_ErrorResponse::fromXML($response['ResponseBody']);
 
                             // We will not retry throttling errors since this would just add to the throttling problem.
@@ -338,7 +338,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
 
                     /* Rethrow on deserializer error */
                 } catch (Exception $e) {
-                    require_once('Exception.php');
+                    require_once(dirname(__FILE__) . '/Exception.php');
                     throw new MarketplaceWebService_Exception(array('Exception' => $e, 'Message' => $e->getMessage()));
                 }
 
@@ -529,7 +529,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
 
         $parsedHeader = $this->parseHttpHeader($header);
 
-        require_once('Model/ResponseHeaderMetadata.php');
+        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         $responseHeaderMetadata = new MarketplaceWebService_Model_ResponseHeaderMetadata(
             $parsedHeader['x-mws-request-id'],
             $parsedHeader['x-mws-response-context'],
@@ -637,7 +637,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         return array(
             CURLOPT_POST => true,
             CURLOPT_USERAGENT => $this->config['UserAgent'],
-            CURLOPT_VERBOSE => true,
+            CURLOPT_VERBOSE => false,
             CURLOPT_HEADERFUNCTION => array($this, 'headerCallback'),
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_SSL_VERIFYPEER => true,
