@@ -19,7 +19,8 @@
 /**
  *  @see MarketplaceWebService_Interface
  */
-require_once ('MarketplaceWebService/Interface.php'); 
+require_once(dirname(__FILE__) . '/Interface.php');
+
 
 /**
  * The Amazon Marketplace Web Service contain APIs for inventory and order management.
@@ -125,7 +126,7 @@ class  MarketplaceWebService_Mock implements MarketplaceWebService_Interface
      */
     public function submitFeed($request) 
     {
-        require_once ('MarketplaceWebService/Model/SubmitFeedResponse.php');
+        require_once(dirname(__FILE__) . '/Model/SubmitFeedResponse.php');
         return MarketplaceWebService_Model_SubmitFeedResponse::fromXML($this->invoke('SubmitFeed'));
     }
 
@@ -146,7 +147,7 @@ class  MarketplaceWebService_Mock implements MarketplaceWebService_Interface
      */
     public function getReportCount($request) 
     {
-        require_once ('MarketplaceWebService/Model/GetReportCountResponse.php');
+        require_once(dirname(__FILE__) . '/Model/GetReportCountResponse.php');
         return MarketplaceWebService_Model_GetReportCountResponse::fromXML($this->invoke('GetReportCount'));
     }
 
@@ -425,6 +426,6 @@ class  MarketplaceWebService_Mock implements MarketplaceWebService_Interface
 
     private function invoke($actionName)
     {
-        return $xml = file_get_contents('MarketplaceWebService/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
+        return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
 }
