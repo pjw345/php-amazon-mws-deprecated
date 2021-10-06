@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2021 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2018-10-31
- * Generated: Mon Oct 22 22:40:38 UTC 2018
+ * Library Version: 2021-01-06
+ * Generated: Wed Jan 06 18:02:52 UTC 2021
  */
 
 /**
@@ -51,6 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>PromotionIds: array</li>
  * <li>CODFee: MarketplaceWebServiceOrders_Model_Money</li>
  * <li>CODFeeDiscount: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>DeemedResellerCategory: string</li>
+ * <li>IossNumber: string</li>
  * <li>IsGift: bool</li>
  * <li>GiftMessageText: string</li>
  * <li>GiftWrapLevel: string</li>
@@ -65,6 +67,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>TaxCollection: MarketplaceWebServiceOrders_Model_TaxCollection</li>
  * <li>SerialNumberRequired: bool</li>
  * <li>IsTransparency: bool</li>
+ * <li>StoreChainStoreId: string</li>
  *
  * </ul>
  */
@@ -95,6 +98,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'PromotionIds' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'PromotionId'),
     'CODFee' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
     'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'DeemedResellerCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'IossNumber' => array('FieldValue' => null, 'FieldType' => 'string'),
     'IsGift' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'GiftMessageText' => array('FieldValue' => null, 'FieldType' => 'string'),
     'GiftWrapLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -109,6 +114,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'TaxCollection' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_TaxCollection'),
     'SerialNumberRequired' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'IsTransparency' => array('FieldValue' => null, 'FieldType' => 'bool'),
+    'StoreChainStoreId' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
     }
@@ -1098,6 +1104,98 @@ require_once (dirname(__FILE__) . '/../Model.php');
     }
 
     /**
+     * Get the value of the DeemedResellerCategory property.
+     *
+     * @return String DeemedResellerCategory.
+     */
+    public function getDeemedResellerCategory()
+    {
+        return $this->_fields['DeemedResellerCategory']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the DeemedResellerCategory property.
+     *
+     * @param string deemedResellerCategory
+     * @return this instance
+     */
+    public function setDeemedResellerCategory($value)
+    {
+        $this->_fields['DeemedResellerCategory']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if DeemedResellerCategory is set.
+     *
+     * @return true if DeemedResellerCategory is set.
+     */
+    public function isSetDeemedResellerCategory()
+    {
+                return !is_null($this->_fields['DeemedResellerCategory']['FieldValue']);
+            }
+
+    /**
+     * Set the value of DeemedResellerCategory, return this.
+     *
+     * @param deemedResellerCategory
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withDeemedResellerCategory($value)
+    {
+        $this->setDeemedResellerCategory($value);
+        return $this;
+    }
+
+    /**
+     * Get the value of the IossNumber property.
+     *
+     * @return String IossNumber.
+     */
+    public function getIossNumber()
+    {
+        return $this->_fields['IossNumber']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the IossNumber property.
+     *
+     * @param string iossNumber
+     * @return this instance
+     */
+    public function setIossNumber($value)
+    {
+        $this->_fields['IossNumber']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if IossNumber is set.
+     *
+     * @return true if IossNumber is set.
+     */
+    public function isSetIossNumber()
+    {
+                return !is_null($this->_fields['IossNumber']['FieldValue']);
+            }
+
+    /**
+     * Set the value of IossNumber, return this.
+     *
+     * @param iossNumber
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withIossNumber($value)
+    {
+        $this->setIossNumber($value);
+        return $this;
+    }
+
+    /**
      * Check the value of IsGift.
      *
      * @return true if IsGift is set to true.
@@ -1768,6 +1866,52 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function withIsTransparency($value)
     {
         $this->setIsTransparency($value);
+        return $this;
+    }
+
+    /**
+     * Get the value of the StoreChainStoreId property.
+     *
+     * @return String StoreChainStoreId.
+     */
+    public function getStoreChainStoreId()
+    {
+        return $this->_fields['StoreChainStoreId']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the StoreChainStoreId property.
+     *
+     * @param string storeChainStoreId
+     * @return this instance
+     */
+    public function setStoreChainStoreId($value)
+    {
+        $this->_fields['StoreChainStoreId']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if StoreChainStoreId is set.
+     *
+     * @return true if StoreChainStoreId is set.
+     */
+    public function isSetStoreChainStoreId()
+    {
+                return !is_null($this->_fields['StoreChainStoreId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of StoreChainStoreId, return this.
+     *
+     * @param storeChainStoreId
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withStoreChainStoreId($value)
+    {
+        $this->setStoreChainStoreId($value);
         return $this;
     }
 

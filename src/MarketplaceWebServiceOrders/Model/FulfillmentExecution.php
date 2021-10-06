@@ -25,69 +25,69 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ResponseMetadata
+ * MarketplaceWebServiceOrders_Model_FulfillmentExecution
  * 
  * Properties:
  * <ul>
  * 
- * <li>RequestId: string</li>
+ * <li>FulfillmentSupplySourceId: string</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ResponseMetadata extends MarketplaceWebServiceOrders_Model {
+ class MarketplaceWebServiceOrders_Model_FulfillmentExecution extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'FulfillmentSupplySourceId' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
     }
 
     /**
-     * Get the value of the RequestId property.
+     * Get the value of the FulfillmentSupplySourceId property.
      *
-     * @return String RequestId.
+     * @return String FulfillmentSupplySourceId.
      */
-    public function getRequestId()
+    public function getFulfillmentSupplySourceId()
     {
-        return $this->_fields['RequestId']['FieldValue'];
+        return $this->_fields['FulfillmentSupplySourceId']['FieldValue'];
     }
 
     /**
-     * Set the value of the RequestId property.
+     * Set the value of the FulfillmentSupplySourceId property.
      *
-     * @param string requestId
+     * @param string fulfillmentSupplySourceId
      * @return this instance
      */
-    public function setRequestId($value)
+    public function setFulfillmentSupplySourceId($value)
     {
-        $this->_fields['RequestId']['FieldValue'] = $value;
+        $this->_fields['FulfillmentSupplySourceId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Check to see if RequestId is set.
+     * Check to see if FulfillmentSupplySourceId is set.
      *
-     * @return true if RequestId is set.
+     * @return true if FulfillmentSupplySourceId is set.
      */
-    public function isSetRequestId()
+    public function isSetFulfillmentSupplySourceId()
     {
-                return !is_null($this->_fields['RequestId']['FieldValue']);
+                return !is_null($this->_fields['FulfillmentSupplySourceId']['FieldValue']);
             }
 
     /**
-     * Set the value of RequestId, return this.
+     * Set the value of FulfillmentSupplySourceId, return this.
      *
-     * @param requestId
+     * @param fulfillmentSupplySourceId
      *             The new value to set.
      *
      * @return This instance.
      */
-    public function withRequestId($value)
+    public function withFulfillmentSupplySourceId($value)
     {
-        $this->setRequestId($value);
+        $this->setFulfillmentSupplySourceId($value);
         return $this;
     }
 

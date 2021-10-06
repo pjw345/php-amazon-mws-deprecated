@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2021 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2018-10-31
- * Generated: Mon Oct 22 22:40:38 UTC 2018
+ * Library Version: 2021-01-06
+ * Generated: Wed Jan 06 18:02:52 UTC 2021
  */
 
 /**
@@ -45,6 +45,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>MaxResultsPerPage: int</li>
  * <li>TFMShipmentStatus: array</li>
  * <li>EasyShipShipmentStatus: array</li>
+ * <li>ActualFulfillmentSupplySourceId: string</li>
+ * <li>IsISPU: bool</li>
+ * <li>Item: MarketplaceWebServiceOrders_Model_ListOrdersOrderItem</li>
  *
  * </ul>
  */
@@ -69,6 +72,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'MaxResultsPerPage' => array('FieldValue' => null, 'FieldType' => 'int'),
     'TFMShipmentStatus' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Status'),
     'EasyShipShipmentStatus' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Status'),
+    'ActualFulfillmentSupplySourceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'IsISPU' => array('FieldValue' => null, 'FieldType' => 'bool'),
+    'Item' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ListOrdersOrderItem'),
     );
     parent::__construct($data);
     }
@@ -868,6 +874,154 @@ require_once (dirname(__FILE__) . '/../Model.php');
         {
             $this->_fields['EasyShipShipmentStatus']['FieldValue'][] = $EasyShipShipmentStatus;
         }
+        return $this;
+    }
+
+    /**
+     * Get the value of the ActualFulfillmentSupplySourceId property.
+     *
+     * @return String ActualFulfillmentSupplySourceId.
+     */
+    public function getActualFulfillmentSupplySourceId()
+    {
+        return $this->_fields['ActualFulfillmentSupplySourceId']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the ActualFulfillmentSupplySourceId property.
+     *
+     * @param string actualFulfillmentSupplySourceId
+     * @return this instance
+     */
+    public function setActualFulfillmentSupplySourceId($value)
+    {
+        $this->_fields['ActualFulfillmentSupplySourceId']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if ActualFulfillmentSupplySourceId is set.
+     *
+     * @return true if ActualFulfillmentSupplySourceId is set.
+     */
+    public function isSetActualFulfillmentSupplySourceId()
+    {
+                return !is_null($this->_fields['ActualFulfillmentSupplySourceId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of ActualFulfillmentSupplySourceId, return this.
+     *
+     * @param actualFulfillmentSupplySourceId
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withActualFulfillmentSupplySourceId($value)
+    {
+        $this->setActualFulfillmentSupplySourceId($value);
+        return $this;
+    }
+
+    /**
+     * Check the value of IsISPU.
+     *
+     * @return true if IsISPU is set to true.
+     */
+    public function isIsISPU()
+    {
+        return !is_null($this->_fields['IsISPU']['FieldValue']) && $this->_fields['IsISPU']['FieldValue'];
+    }
+
+    /**
+     * Get the value of the IsISPU property.
+     *
+     * @return Boolean IsISPU.
+     */
+    public function getIsISPU()
+    {
+        return $this->_fields['IsISPU']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the IsISPU property.
+     *
+     * @param bool isISPU
+     * @return this instance
+     */
+    public function setIsISPU($value)
+    {
+        $this->_fields['IsISPU']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if IsISPU is set.
+     *
+     * @return true if IsISPU is set.
+     */
+    public function isSetIsISPU()
+    {
+                return !is_null($this->_fields['IsISPU']['FieldValue']);
+            }
+
+    /**
+     * Set the value of IsISPU, return this.
+     *
+     * @param isISPU
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withIsISPU($value)
+    {
+        $this->setIsISPU($value);
+        return $this;
+    }
+
+    /**
+     * Get the value of the Item property.
+     *
+     * @return ListOrdersOrderItem Item.
+     */
+    public function getItem()
+    {
+        return $this->_fields['Item']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the Item property.
+     *
+     * @param MarketplaceWebServiceOrders_Model_ListOrdersOrderItem item
+     * @return this instance
+     */
+    public function setItem($value)
+    {
+        $this->_fields['Item']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if Item is set.
+     *
+     * @return true if Item is set.
+     */
+    public function isSetItem()
+    {
+                return !is_null($this->_fields['Item']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Item, return this.
+     *
+     * @param item
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withItem($value)
+    {
+        $this->setItem($value);
         return $this;
     }
 

@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2021 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2018-10-31
- * Generated: Mon Oct 22 22:40:38 UTC 2018
+ * Library Version: 2021-01-06
+ * Generated: Wed Jan 06 18:02:52 UTC 2021
  */
 
 /**
@@ -43,6 +43,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>CountryCode: string</li>
  * <li>Phone: string</li>
  * <li>AddressType: string</li>
+ * <li>isAddressSharingConfidential: bool</li>
  *
  * </ul>
  */
@@ -65,6 +66,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'CountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Phone' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AddressType' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'isAddressSharingConfidential' => array('FieldValue' => null, 'FieldType' => 'bool'),
     );
     parent::__construct($data);
     }
@@ -664,6 +666,62 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function withAddressType($value)
     {
         $this->setAddressType($value);
+        return $this;
+    }
+
+    /**
+     * Check the value of isAddressSharingConfidential.
+     *
+     * @return true if isAddressSharingConfidential is set to true.
+     */
+    public function isisAddressSharingConfidential()
+    {
+        return !is_null($this->_fields['isAddressSharingConfidential']['FieldValue']) && $this->_fields['isAddressSharingConfidential']['FieldValue'];
+    }
+
+    /**
+     * Get the value of the isAddressSharingConfidential property.
+     *
+     * @return Boolean isAddressSharingConfidential.
+     */
+    public function getisAddressSharingConfidential()
+    {
+        return $this->_fields['isAddressSharingConfidential']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the isAddressSharingConfidential property.
+     *
+     * @param bool isAddressSharingConfidential
+     * @return this instance
+     */
+    public function setisAddressSharingConfidential($value)
+    {
+        $this->_fields['isAddressSharingConfidential']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if isAddressSharingConfidential is set.
+     *
+     * @return true if isAddressSharingConfidential is set.
+     */
+    public function isSetisAddressSharingConfidential()
+    {
+                return !is_null($this->_fields['isAddressSharingConfidential']['FieldValue']);
+            }
+
+    /**
+     * Set the value of isAddressSharingConfidential, return this.
+     *
+     * @param isAddressSharingConfidential
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withisAddressSharingConfidential($value)
+    {
+        $this->setisAddressSharingConfidential($value);
         return $this;
     }
 
