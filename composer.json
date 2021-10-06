@@ -2,7 +2,7 @@
   "name": "pjw345/php-amazon-mws",
   "type": "library",
   "description": "An open-source library to connect to Amazon's MWS web services in an object-oriented manner, with a focus on intuitive usage.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "keywords": [
     "API",
     "Amazon",
